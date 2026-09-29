@@ -1,0 +1,43 @@
+.container {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0.5fr, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "box-1 box-2 box-3"
+    "box-1 box-5 box-3"
+    "box-4 box-5 box-6";
+    gap: 10px 10px;
+}
+
+.gunung {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        height: 1200px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "box-1 box-2"
+        "box-1 box-3"
+        "box-4 box-3"
+        "box-4 box-6"
+        "box-5 box-6";
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 768px) {
+    .container {
+        height: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "box-1 box-1 box-3"
+        "box-2 box-2 box-3"
+        "box-4 box-5 box-6";
+    }
+}
